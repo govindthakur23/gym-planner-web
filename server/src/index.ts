@@ -14,5 +14,5 @@ app.use(express.json);
 
 
 app.listen(PORT, () => {
-    console.log(`server runing on port : ${PORT}`);
+    console.log(`server runing on portt : ${PORT}`);
 });
