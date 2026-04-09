@@ -11,7 +11,7 @@ const PORT = process.env.PORT || 3001;
 app.use(cors());
 app.use(cookieParser());
 app.use(express.json);
-
+app.param;
 
 app.listen(PORT, () => {
     console.log(`server runing on portt : ${PORT}`);
