@@ -1,16 +1,32 @@
+// {
+//   "compilerOptions": {
+//     "module": "commonjs",
+//     // "module": "ESNext",
+//     // "moduleResolution": "node",
+//     "target": "ES2020",
+//     "rootDir": "./src",
+//     "outDir": "./dist",
+//     "strict": true,
+//     "esModuleInterop": true,
+//     "experimentalDecorators": true,
+//     "emitDecoratorMetadata": true,
+//     "skipLibCheck": true,
+//     "verbatimModuleSyntax": false
+//   }
+// }
+
+
 {
   "compilerOptions": {
     "module": "commonjs",
+    // "moduleResolution": "node",
     "target": "ES2020",
-    "rootDir": "./src",
+
     "outDir": "./dist",
 
     "strict": true,
     "esModuleInterop": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
 
-    "skipLibCheck": true,
-    "verbatimModuleSyntax": false
+    "skipLibCheck": true
   }
 }
