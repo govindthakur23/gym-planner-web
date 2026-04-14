@@ -32,7 +32,7 @@ export default function AuthProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     async function loadUser() {
-      try {
+      try { 
         const result = await authClient.getSession();
         if (result && result.data?.user) {
           setNeonUser(result.data.user);
