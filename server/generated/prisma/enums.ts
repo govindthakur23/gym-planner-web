@@ -9,7 +9,7 @@
 * 🟢 You can import this file directly.
 */
 
-
+// also this may lead to inconsistency in the all.
 
 // This file is empty because there are no enums in the schema.
 export {}
