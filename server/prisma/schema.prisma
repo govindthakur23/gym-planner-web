@@ -12,6 +12,10 @@ datasource db {
   provider = "postgresql"
 }
 
+// model training_plans {
+  
+// }
+
 model user_profiles {
   user_id String @id @db.Uuid
   goal String @db.VarChar(20)
