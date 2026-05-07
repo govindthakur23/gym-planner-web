@@ -1,9 +1,10 @@
 import { Router, type Request, type Response } from "express";
 import { PresentationIcon } from "lucide-react";
-import { error, log } from "node:console";
+import { error, log, timeStamp } from "node:console";
 import { Prisma } from "../../generated/prisma/browser";
 import { prisma } from "../lib/prisma";
 import { version } from "node:os";
+import { create } from "node:domain";
 
 export const planRouter = Router();
 
@@ -24,7 +25,7 @@ planRouter.post("/", async (req: Request, res: Response) => {
             where: { user_id: userId },
             orderBy: { ceated_at: "desc" },
             select: { version: true }, 
-
+            createdat: {create: timeStamp},
         })
 
     } catch (error) {
