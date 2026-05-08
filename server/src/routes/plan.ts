@@ -26,6 +26,7 @@ planRouter.post("/", async (req: Request, res: Response) => {
             orderBy: { ceated_at: "desc" },
             select: { version: true }, 
             createdat: {create: timeStamp},
+            updatedat: {updated: timeStamp},
         })
 
     } catch (error) {
