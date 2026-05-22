@@ -12,6 +12,7 @@ planRouter.post("/", async (req: Request, res: Response) => {
     try {
         const { userId } = req.body;
         if (!userId) {
+            console.log("Program reaced here")
             return res.status(400).json({ error: "User id is required" });
         }
         const profile = await prisma.user_profiles.findUnique({
@@ -24,11 +25,12 @@ planRouter.post("/", async (req: Request, res: Response) => {
         const latestPlan = await prisma.training_plans.findFirst({
             where: { user_id: userId },
             orderBy: { ceated_at: "desc" },
-            select: { version: true }, 
+            select: { version: true },
         })
 
     } catch (error) {
         console.log("Error generating plan ", error);
+        console.log("Program reaced here")
         res.status(500).json({ error: "Failed to generate plan" });
     }
 })
