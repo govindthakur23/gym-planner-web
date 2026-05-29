@@ -14,6 +14,7 @@ planRouter.post("/", async (req: Request, res: Response) => {
         if (!userId) {
             console.log("Program reaced here")
             console.log("Program reaced here 2")
+            console.log("Program reaced here 3 and stop")
 
             return res.status(400).json({ error: "User id is required" });
         }
@@ -23,7 +24,7 @@ planRouter.post("/", async (req: Request, res: Response) => {
         if (!profile) {
             return res.status(400).json({ error: "User profile not found. Complete onBorading first" });
         }
-
+        
         const latestPlan = await prisma.training_plans.findFirst({
             where: { user_id: userId },
             orderBy: { ceated_at: "desc" },
