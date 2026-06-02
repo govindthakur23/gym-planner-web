@@ -14,8 +14,6 @@ planRouter.post("/", async (req: Request, res: Response) => {
         if (!userId) {
             console.log("Program reaced here")
             console.log("Program reaced here 2")
-            console.log("Program reaced here 3 and stop")
-
             return res.status(400).json({ error: "User id is required" });
         }
         const profile = await prisma.user_profiles.findUnique({
