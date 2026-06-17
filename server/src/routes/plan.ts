@@ -12,9 +12,6 @@ planRouter.post("/", async (req: Request, res: Response) => {
     try {
         const { userId } = req.body;
         if (!userId) {
-            console.log("Program reaced here")
-            console.log("Program reaced here 2")
-            console.log("Program reaced here 2")
             
             return res.status(400).json({ error: "User id is required" });
         }
