@@ -9,7 +9,7 @@ dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3002;
-
+console.log("Hello from Index server")
 app.use(cors());
 app.use(cookieParser());
 app.use(express.json());
