@@ -30,7 +30,6 @@ planRouter.post("/", async (req: Request, res: Response) => {
 
     } catch (error) {
         console.log("Error generating plan ", error);
-        console.log("Program reaced here")
         res.status(500).json({ error: "Failed to generate plan" });
     }
 })
