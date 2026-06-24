@@ -7,6 +7,7 @@ profileRouter.post("/", async (req: Request, res: Response) => {
     try {
         const { userId, ...profileData } = req.body;
         if (!userId) {
+
             res.status(400).json({ error: "User Id is required" });
         }
         const {
@@ -26,7 +27,7 @@ profileRouter.post("/", async (req: Request, res: Response) => {
             !sessionLength ||
             !equipment ||
             !injuries ||
-            // !preferredSplit
+            !preferredSplit
         ) {
             res.status(400).json({ error: "Missing required fields" });
         }
