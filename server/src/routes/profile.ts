@@ -57,6 +57,7 @@ profileRouter.post("/", async (req: Request, res: Response) => {
         res.json({ sucess: true });
     } catch (error) {
         console.error("Error Saving Profile", error);
+        console.error("Aditionaly cosole for erro");
         res.status(500).json({ error: "Failed to save profile" });
     }
 })
