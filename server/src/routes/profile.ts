@@ -16,7 +16,7 @@ profileRouter.post("/", async (req: Request, res: Response) => {
             daysPerWeek,
             sessionLength,
             equipment,
-            injuries,
+            // injuries,
             preferredSplit
         } = profileData;
 
@@ -26,7 +26,7 @@ profileRouter.post("/", async (req: Request, res: Response) => {
             !daysPerWeek ||
             !sessionLength ||
             !equipment ||
-            !injuries ||
+           // !injuries ||
             !preferredSplit
         ) {
             res.status(400).json({ error: "Missing required fields" });
@@ -39,7 +39,7 @@ profileRouter.post("/", async (req: Request, res: Response) => {
                 days_Per_Week: daysPerWeek,
                 session_Length: sessionLength,
                 equipment,
-                injuries: injuries || null,
+               // injuries: injuries || null,
                 preferred_Split: preferredSplit,
                 updated_at: new Date(),
             },
@@ -50,7 +50,7 @@ profileRouter.post("/", async (req: Request, res: Response) => {
                 days_Per_Week: daysPerWeek,
                 session_Length: sessionLength,
                 equipment,
-                injuries: injuries || null,
+               // injuries: injuries || null,
                 preferred_Split: preferredSplit,
             }
         });
